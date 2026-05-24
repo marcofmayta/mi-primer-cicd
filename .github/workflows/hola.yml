@@ -1,0 +1,19 @@
+name: Mi primer workflow
+
+on: [push]
+
+jobs:
+    saludar:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Imprimir saludo
+              run: echo "Hola, CI/CD! Soy el runner de Ubuntu y estoy ejecutando tu workflow."
+
+            - name: Ver la version de Python disponible
+              run: python3 --version
+            
+            - name: Ver la fecha y hora actual
+              run: date
+
+            - name: Ver el sistema operativo
+              run: uname -a
